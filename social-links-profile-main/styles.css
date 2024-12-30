@@ -1,0 +1,216 @@
+:root{
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%); 
+    --grey700: hsl(0, 0%, 20%);
+    --grey800: hsl(0, 0%, 12%);
+    --brown800: hsl(14, 45%, 36%);
+    --grey900: hsl(0, 0%, 8%);
+    --stone900: hsl(24, 5%, 18%);
+    --rose50: hsl(330, 100%, 98%);
+}
+body{
+    display: grid;
+    place-content: center;
+    background-color: var(--grey900);
+    line-height: 2;
+    font-size: 16px;
+}
+.info-container{
+    display: grid;
+    place-content: center;
+    position: static;
+    margin: auto;
+}
+.personal-details{
+    background-color: var(--grey800);
+    filter: drop-shadow(20px 20px 30px rgba(56, 55, 55, 0.5));
+    margin-top: 10%;
+    margin-bottom: 10%;
+    /* min-width: 30vw;
+    min-height: 48vw; */
+    border-radius: 25px;
+    padding: 1.5vw;
+}
+.img-container {
+    display: grid;
+    place-content: center;
+    position: static;
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    margin:  auto;
+  }
+#person-img{
+    border-radius: 50%;
+    width: 150%;
+}
+#name{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Inter', serif;
+    font-size: 156.25%;
+    padding-left: 20%;
+}
+#location{
+    color: var(--green);
+    font-weight: bold;
+    font-family: 'Inter', serif;
+    padding-left: 20%;
+}
+#bio{
+    color: white;
+    font-family: 'Inter', serif;
+    margin-bottom: 1.5%;
+}
+.social-links-container{
+    display: grid;
+    place-content: start;
+}
+
+.profile-button{
+    width: 275%;
+    height: 80%;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--grey700);
+    border: none;
+}
+.profile-button:hover {
+    background-color: var(--green);
+    transition: 0.2s;
+    cursor: pointer;
+    color: var(--white);
+  }
+#gh-button, #m-button, #li-button, #ig-button, #x-button{
+    margin-bottom: 4%;
+}
+.toggle {
+    position: relative;
+    display: block;
+    left: 35%;
+    top: 10%;
+    width: 70px;
+    height: 30px;
+    padding: 3px;
+    margin: auto;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.toggle-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.toggle-label {
+    position: static;
+    display: grid;
+    place-content: center;
+    height: inherit;
+    font-size: 14px;
+    background: #c5c588;;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), 
+                inset 0 0 3px rgba(0, 0, 0, 0.15);
+}
+.toggle-label:before, .toggle-label:after {
+    position: absolute;
+    top: 50%;
+    color: #000000d4;
+    margin-top: -.5em;
+    line-height: 1;
+}
+.toggle-label:before {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    content: "\f185";
+    right: 10px;
+    color: #fff;
+}
+.toggle-label:after {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    content: "\f186";
+    left: 12px;
+    color: #fff;
+    opacity: 0;
+}
+.toggle-input:checked~.toggle-label {
+    background: #000000d4;;
+}
+.toggle-input:checked~.toggle-label:before {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    content: "\f185";
+}
+.toggle-input:checked~.toggle-label:after {
+    opacity: 1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    content: "\f186";
+}
+.toggle-handle {
+    position: absolute;
+    top: 3px;
+    left: 3.2px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, 
+              #FFFFFF 40%, #f0f0f0);
+    border-radius: 50%;
+}
+.toggle-handle:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 16px;
+    height: 16px;
+}
+.toggle-input:checked~.toggle-handle {
+    left: 43.5px;
+    box-shadow: -1px 1px 5px 
+              rgba(0, 0, 0, 0.2);
+}
+.toggle-label,
+.toggle-handle {
+    transition: All 0.3s ease;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+/* Light mode styles */
+html[data-mode='light'] body {
+    background-color: white;
+    color: var(--grey900)
+}
+html[data-mode='light'] article {
+    background-color: var(--rose50);
+    color: var(--grey900);
+}
+html[data-mode='light'] .profile-button {
+    color: var(--grey900);
+    background-color: var(--white);
+  }
+html[data-mode='light'] .profile-button:hover {
+    color: var(--grey900);
+    background-color: var(--brown800);
+  }
+html[data-mode='light'] #name{
+    color: var(--grey900);
+  }
+html[data-mode='light'] #bio{
+    color: var(--grey900);
+  }
+  html[data-mode='light'] #location {
+    color: var(--brown800);
+  }
+

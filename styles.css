@@ -64,11 +64,11 @@ body{
 }
 .social-links-container{
     display: grid;
-    place-content: start;
+    place-content: center;
 }
 
 .profile-button{
-    width: 275%;
+    width: 75vw;
     height: 80%;
     border-radius: 10px;
     font-weight: bold;

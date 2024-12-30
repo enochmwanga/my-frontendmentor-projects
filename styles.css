@@ -68,7 +68,7 @@ body{
 }
 
 .profile-button{
-    width: 75vw;
+    width: 21.51vw;;
     height: 80%;
     border-radius: 10px;
     font-weight: bold;
@@ -213,4 +213,8 @@ html[data-mode='light'] #bio{
   html[data-mode='light'] #location {
     color: var(--brown800);
   }
+@media only screen and (min-width: 320px) and (max-width: 768px){
+ .profile-button{
+    width: 75vw;   
+}
 
